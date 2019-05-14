@@ -1,10 +1,10 @@
 import React from 'react';
-import HomePage from './components/HomePage';
+import Shows from './components/TVShows/Shows';
 
 const App = () => {
   return (
     <div className="container">
-      <HomePage />
+      <Shows />
     </div>
   )
 }
