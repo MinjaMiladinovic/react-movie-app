@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Movies from './Movies';
+import Movies from './Movies/Movies';
 
 export default class HomePage extends Component {
   render() {

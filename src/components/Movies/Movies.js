@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import APIService from '../APIService';
+import APIService from '../../APIService';
 import { connect } from 'react-redux';
+import MovieItems from './MovieItems';
+import "../../style.css";
 
 class Movies extends Component {
   componentDidMount() {
@@ -21,18 +23,16 @@ class Movies extends Component {
 
   renderMovies() {
     const { topMovies } = this.props;
-    return topMovies.map(movie => {
-      return (
-        <div className="col-md-6" key={movie.id}>
-          <div className="card mb-3">
-          <h4 className="text-center">{movie.title}</h4>
-          </div>
-        </div>
-      );
-    });
+    return topMovies.map((movie, i) =>
+      <MovieItems
+        key={i}
+        movie={movie}
+      />
+    );
   }
 
   render() {
+    console.log(this.props.topMovies)
     return (
       <div className="row">
         {this.renderMovies()}

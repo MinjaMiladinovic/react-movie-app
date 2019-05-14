@@ -23,7 +23,7 @@ export default {
   getMoviesById(id) {
     return axios({
       method: "GET",
-      url: `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+      url: `${MOVIE_URL}${id}?api_key=${API_KEY}&language=en-US`
     })
   },
   
@@ -37,7 +37,7 @@ export default {
   getShowsById(id) {
     return axios({
       method: "GET",
-      url: `https://api.themoviedb.org/3/tv/${id}?api_key=${API_KEY}&language=en-US&page=1`
+      url: `${TV_SHOW_URL}${id}?api_key=${API_KEY}&language=en-US&page=1`
     })
   },
 }
