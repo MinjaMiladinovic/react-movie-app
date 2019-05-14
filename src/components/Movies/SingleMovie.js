@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import APIService from '../../APIService';
-import { Link } from 'react-router-dom';
 
 export default class SingleMovie extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       singleMovie: {}
     }
@@ -22,15 +20,22 @@ export default class SingleMovie extends Component {
       .then(res => this.setState({ singleMovie: res.data }))
   }
 
+  goBack = () => {
+    this.props.history.goBack();
+  }
+
   render() {
     const { singleMovie } = this.state;
     return (
       <div>
         <div className="container">
           <div className="col-md-12">
-            <h4><Link to="/">Back</Link></h4>
-            <img src={`https://image.tmdb.org/t/p/original/${singleMovie.backdrop_path}`} className="img-fluid" alt="" />
-            <h4>{singleMovie.title}</h4>
+            <button className="btn btn-light text-dark btn-sm mt-3" onClick={this.goBack}><i className="fas fa-angle-left mr-1"></i>Back</button>
+            <img src={`https://image.tmdb.org/t/p/original/${singleMovie.backdrop_path}`} 
+              className="img-fluid mt-4" 
+              alt={`${singleMovie.title}`} 
+            />
+            <h1 className="display-4 mt-3 mb-3">{singleMovie.title}</h1>
             <h5>Movie overview</h5>
             <p>{singleMovie.overview}</p>
           </div>
