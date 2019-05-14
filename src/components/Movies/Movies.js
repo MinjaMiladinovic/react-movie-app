@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import APIService from '../../APIService';
 import { connect } from 'react-redux';
 import MovieItems from './MovieItems';
+import { Link } from 'react-router-dom'
 import "../../style.css";
 
 class Movies extends Component {
@@ -32,10 +33,13 @@ class Movies extends Component {
   }
 
   render() {
-    console.log(this.props.topMovies)
     return (
-      <div className="row">
-        {this.renderMovies()}
+      <div className="container">
+        <Link className="btn btn-light text-dark btn-sm mt-3 mr-3 active" to="/movies">Movies</Link>
+        <Link className="btn btn-light text-dark btn-sm mt-3" to="/shows">TV Shows</Link>
+        <div className="row mt-4">
+          {this.renderMovies()}
+        </div>
       </div>
     )
   }

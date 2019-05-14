@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import Movies from './Movies/Movies';
+import React from 'react';
+import Shows from './TVShows/Shows';
 
-export default class HomePage extends Component {
-  render() {
-    return (
-      <div>
-        <Movies />
-      </div>
-    )
-  }
+const HomePage = () => {
+  return (
+    <div className="container">
+      <Shows />
+    </div>
+  )
 }
+
+export default HomePage;
