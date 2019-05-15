@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import APIService from '../../APIService';
-import ShowItem from './ShowItem'
+import TVShowDetails from './TVShowDetails'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import "../../style.css";
@@ -25,7 +25,7 @@ class Shows extends Component {
   renderShows() {
     const { topShows } = this.props;
     return topShows.map((show, i) =>
-      <ShowItem
+      <TVShowDetails
         key={i}
         show={show}
       />

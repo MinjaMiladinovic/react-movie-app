@@ -16,8 +16,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/shows" exact={true} component={TVShows} />
-        <Route path="/singleShow/:id" exact={true} component={SingleTvShow} />
-        <Route path="/singleMovie/:id" exact={true} component={SingleMovie} />
+        <Route path="/tvShowDetails/:id" exact={true} component={SingleTvShow} />
+        <Route path="/movieDetails/:id" exact={true} component={SingleMovie} />
         <Route path="/movies" exact={true} component={Movies} />
         <Route path="/" exact={true} component={App} />
       </Switch>

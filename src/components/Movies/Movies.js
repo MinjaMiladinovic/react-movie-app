@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import APIService from '../../APIService';
 import { connect } from 'react-redux';
-import MovieItems from './MovieItems';
+import MovieDetails from './MovieDetails';
 import { Link } from 'react-router-dom'
 import "../../style.css";
 
@@ -25,7 +25,7 @@ class Movies extends Component {
   renderMovies() {
     const { topMovies } = this.props;
     return topMovies.map((movie, i) =>
-      <MovieItems
+      <MovieDetails
         key={i}
         movie={movie}
       />

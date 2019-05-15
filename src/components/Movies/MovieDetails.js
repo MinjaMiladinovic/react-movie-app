@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../../style.css";
 
-const MovieItems = (props) => {
+const MovieDetails = (props) => {
   return (
     <div className="col-md-6 col-sm-12">
-      <Link to={`/singleMovie/${props.movie.id}`}>
+      <Link to={`/movieDetails/${props.movie.id}`}>
         <div className="text-center mb-3 border border-dark">
           <img
             className="img-fluid"
@@ -19,4 +19,4 @@ const MovieItems = (props) => {
   )
 }
 
-export default MovieItems;
+export default MovieDetails;
