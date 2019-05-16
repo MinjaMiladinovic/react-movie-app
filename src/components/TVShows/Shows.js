@@ -44,9 +44,7 @@ class Shows extends Component {
 
     axios.get(SEARCH_SHOW)
       .then(res => {
-        setTimeout(() => {
-          this.setState({ searchedTvShows: res.data.results.slice(0, 2) })
-        }, 1000);
+        this.setState({ searchedTvShows: res.data.results.slice(0, 2) })
       });
   }
 
