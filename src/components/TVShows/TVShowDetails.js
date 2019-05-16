@@ -7,12 +7,16 @@ const TvShowDetails = (props) => {
     <div className="col-md-6 col-sm-12">
       <Link to={`/tvShowDetails/${props.show.id}`}>
         <div className="text-center mb-3 border border-dark">
-          <img
-            className="img-fluid"
-            src={`https://image.tmdb.org/t/p/original/${props.show.backdrop_path}`}
-            alt={`${props.show.name}`}
+          {props.show.backdrop_path &&
+            <img
+              className="img-fluid"
+              src={`https://image.tmdb.org/t/p/original/${props.show.backdrop_path}`}
+              alt={`${props.show.name}`}
             />
-          <h4 className="text-center mt-3">{props.show.name}</h4>
+          }
+          {props.show.name &&
+            <h4 className="text-center mt-3">{props.show.name}</h4>
+          }
         </div>
       </Link>
     </div>
