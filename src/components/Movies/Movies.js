@@ -46,11 +46,6 @@ class Movies extends Component {
       .then(res => {
         this.setState({ searchedMovies: res.data.results.slice(0, 3) })
       })
-      .catch(error => {
-        if (error.response) {
-          console.log(error.response);
-        }
-      });
   }
 
   renderMovies() {
@@ -92,7 +87,6 @@ class Movies extends Component {
   render() {
     const { topMovies } = this.props;
     const { searchTerm } = this.state;
-    //
     return (
       <div className="container">
         <Link className={topMovies ? 'btn btn-light text-dark btn-sm mt-3 mr-3 active' : ''} to="/movies">Movies</Link>
