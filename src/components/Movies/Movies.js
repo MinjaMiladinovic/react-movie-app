@@ -89,7 +89,7 @@ class Movies extends Component {
     const { searchTerm } = this.state;
     return (
       <div className="container">
-        <Link className={topMovies ? 'btn btn-light text-dark btn-sm mt-3 mr-3 active' : ''} to="/movies">Movies</Link>
+        <Link className={topMovies ? 'btn btn-light text-dark btn-sm mt-3 mr-3 active' : 'btn btn-light text-dark btn-sm mt-3 mr-3'} to="/movies">Movies</Link>
         <Link className="btn btn-light text-dark btn-sm mt-3 mr-3 mt-3" to="/shows">TV Shows</Link>
 
         <div className="mt-3">

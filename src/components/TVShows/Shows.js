@@ -90,7 +90,7 @@ class Shows extends Component {
     return (
       <div className="container">
         <Link className="btn btn-light text-dark btn-sm mt-3 mr-3" to="/movies">Movies</Link>
-        <Link className={topShows ? "btn btn-light text-dark btn-sm mt-3 active" : ''} to="/shows">TV Shows</Link>
+        <Link className={topShows ? "btn btn-light text-dark btn-sm mt-3 active" : 'btn btn-light text-dark btn-sm mt-3'} to="/shows">TV Shows</Link>
         <div className="mt-3">
           <input
             onChange={this.onHandleChange}
