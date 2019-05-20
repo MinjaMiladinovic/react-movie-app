@@ -29,7 +29,7 @@ class Movies extends Component {
     }
   }
 
-  loadPopularMovies = (data) => this.props.dispatch({ type: 'FETCH_TOP_RATED_MOVIE', data });
+  loadPopularMovies = (data) => this.props.dispatch({ type: 'FETCH_TOP_RATED_MOVIES', data });
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.state.searchTerm !== prevState.searchTerm) {
