@@ -86,7 +86,7 @@ class Movies extends Component {
 
   render() {
     const { topMovies } = this.props;
-    const { searchTerm } = this.state;
+    const { searchTerm, searchedMovies } = this.state;
     return (
       <div className="container">
         <Link className={topMovies ? 'btn btn-light text-dark btn-sm mt-3 active' : 'btn btn-light text-dark btn-sm mt-3 mr-3'} to="/movies">Movies</Link>
@@ -107,6 +107,12 @@ class Movies extends Component {
               this.searchedMovies()
               :
               this.renderMovies()
+          }
+          {
+            searchTerm && !searchedMovies.length ? 
+            <h5>Movie named <span className="text-primary">{searchTerm}</span> not found. Please search again.</h5>
+            :
+            ""
           }
         </div>
       </div>

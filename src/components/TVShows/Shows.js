@@ -85,7 +85,7 @@ class Shows extends Component {
   }
 
   render() {
-    const { searchTerm } = this.state;
+    const { searchTerm, searchedTvShows } = this.state;
     const { topShows } = this.props;
     return (
       <div className="container">
@@ -105,6 +105,12 @@ class Shows extends Component {
               this.searchedShows()
               :
               this.renderShows()
+          }
+          {
+            searchTerm && !searchedTvShows.length ? 
+            <h5>TV Show named <span className="text-primary">{searchTerm}</span> not found. Please search again.</h5>
+            :
+            ""
           }
         </div>
       </div>
