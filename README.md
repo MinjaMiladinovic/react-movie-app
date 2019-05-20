@@ -10,7 +10,7 @@ git clone: https://github.com/AdemHuduti/react-movie-app.git
 # Enter in project by typing
 cd react-movie-app
 
-# Install dependencies for server
+# Install dependencies
 npm install
 
 # After installation run the command:
